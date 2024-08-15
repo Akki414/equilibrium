@@ -1,0 +1,13 @@
+def equilibrium(arr):
+    left = 0
+    right = sum(arr)
+    
+    for i, num in enumerate(arr):
+        right -= num
+        if left == right:
+            return i
+        left += num
+    
+    return -1
+arr = [-7, 1, 5, 2, -4, 3, 0]
+print(equilibrium(arr)) 
